@@ -1,0 +1,26 @@
+<section class="newsletter">
+
+<h2>Join The Newsletter</h2>
+
+<p>
+
+Be the first to hear about new music, concerts, exclusive merchandise and special announcements.
+
+</p>
+
+<form class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email address"
+required>
+
+<button type="submit" class="button">
+
+SUBSCRIBE
+
+</button>
+
+</form>
+
+</section>
