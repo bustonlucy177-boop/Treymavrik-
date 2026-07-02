@@ -1,0 +1,79 @@
+{
+  "artist": {
+    "name": "TREY MAVRIK",
+    "tagline": "Official Website",
+    "bio": "Replace this with your official artist biography."
+  },
+
+  "hero": {
+    "title": "TREY MAVRIK",
+    "buttonText": "LISTEN NOW",
+    "buttonLink": "#",
+    "backgroundImage": "images/hero.jpg"
+  },
+
+  "featuredRelease": {
+    "title": "Latest Release",
+    "description": "Replace this with your latest single, EP or album.",
+    "coverImage": "images/album.jpg",
+    "buttonText": "LISTEN NOW",
+    "buttonLink": "#"
+  },
+
+  "musicPlatforms": [
+    {
+      "name": "Spotify",
+      "url": "#"
+    },
+    {
+      "name": "Apple Music",
+      "url": "#"
+    },
+    {
+      "name": "Audiomack",
+      "url": "#"
+    },
+    {
+      "name": "Boomplay",
+      "url": "#"
+    },
+    {
+      "name": "SoundCloud",
+      "url": "#"
+    },
+    {
+      "name": "YouTube Music",
+      "url": "#"
+    },
+    {
+      "name": "Deezer",
+      "url": "#"
+    },
+    {
+      "name": "Amazon Music",
+      "url": "#"
+    },
+    {
+      "name": "TIDAL",
+      "url": "#"
+    }
+  ],
+
+  "socials": {
+    "instagram": "#",
+    "tiktok": "#",
+    "facebook": "#",
+    "youtube": "#",
+    "x": "#"
+  },
+
+  "contact": {
+    "booking": "booking@email.com",
+    "business": "business@email.com",
+    "collaboration": "collaboration@email.com"
+  },
+
+  "videos": [],
+
+  "concerts": []
+}
