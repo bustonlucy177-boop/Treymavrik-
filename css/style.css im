@@ -1,0 +1,190 @@
+/* ==========================================
+   PART 15A
+   Image Performance
+========================================== */
+
+img{
+
+    display:block;
+    width:100%;
+    height:auto;
+
+}
+
+.release-card img,
+.store-item img,
+.ticket-card img{
+
+    transition:transform .4s ease;
+
+}
+
+.release-card img:hover,
+.store-item img:hover,
+.ticket-card img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================================
+   PART 15B
+   Premium Buttons
+========================================== */
+
+.button,
+.buy-btn,
+.ticket-btn{
+
+    cursor:pointer;
+    border-radius:50px;
+    transition:all .35s ease;
+
+}
+
+.button:hover,
+.buy-btn:hover,
+.ticket-btn:hover{
+
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,.20);
+
+}
+
+/* ==========================================
+   PART 15C
+   Page Fade
+========================================== */
+
+body{
+
+    animation:pageFade .8s ease;
+
+}
+
+@keyframes pageFade{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+// ======================================
+// PART 15D
+// Smooth Scroll To Top
+// ======================================
+
+window.addEventListener("load",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"instant"
+
+});
+
+});
+<!-- ==========================================
+PART 15E
+Back To Top Button
+========================================== -->
+
+<button id="backToTop">
+
+↑
+
+</button>
+
+/* ==========================================
+PART 15F
+Back To Top
+========================================== */
+
+#backToTop{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#111;
+
+color:#fff;
+
+font-size:22px;
+
+cursor:pointer;
+
+opacity:0;
+
+pointer-events:none;
+
+transition:.35s;
+
+z-index:999;
+
+}
+
+#backToTop.show{
+
+opacity:1;
+
+pointer-events:auto;
+
+}
+
+// ======================================
+// PART 15G
+// Back To Top
+// ======================================
+
+const topButton=document.getElementById("backToTop");
+
+if(topButton){
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>500){
+
+topButton.classList.add("show");
+
+}else{
+
+topButton.classList.remove("show");
+
+}
+
+});
+
+topButton.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+
+}
