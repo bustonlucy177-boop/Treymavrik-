@@ -1,0 +1,349 @@
+/* ==========================================
+   TREY MAVRIK OFFICIAL WEBSITE
+   style.css
+========================================== */
+
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:90px;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#ffffff;
+    color:#111111;
+    line-height:1.7;
+    overflow-x:hidden;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+}
+
+/* Typography */
+
+h1{
+    font-size:4rem;
+    font-weight:700;
+    letter-spacing:8px;
+    text-transform:uppercase;
+}
+
+h2{
+    font-size:2.2rem;
+    text-align:center;
+    margin-bottom:60px;
+}
+
+h3{
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+p{
+    color:#666;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(15px);
+    z-index:1000;
+    transition:.35s;
+}
+
+.logo{
+    color:#fff;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#fff;
+    transition:.3s;
+}
+
+nav a:hover{
+    opacity:.7;
+}
+
+/* Hero */
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    background:url("../images/hero.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    color:#fff;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero-content p{
+    color:#fff;
+    margin:25px 0 40px;
+}
+
+.button{
+    display:inline-block;
+    padding:16px 42px;
+    border:1px solid #fff;
+    border-radius:50px;
+    color:#fff;
+    transition:.35s;
+}
+
+.button:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* Sections */
+
+section{
+    padding:120px 8%;
+}
+
+.featured{
+    background:#fff;
+}
+
+.music{
+    background:#f8f8f8;
+}
+
+.videos{
+    background:#fff;
+}
+
+.concerts{
+    background:#f8f8f8;
+}
+
+.socials{
+    background:#fff;
+}
+
+/* Featured */
+
+.release-card{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+}
+
+.release-card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:30px;
+    transition:.4s;
+}
+
+.release-card img:hover{
+    transform:scale(1.02);
+}
+
+/* Music */
+
+.streaming-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;
+}
+
+.streaming-grid a{
+    padding:24px;
+    border:1px solid #ddd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:.3s;
+}
+
+.streaming-grid a:hover{
+    background:#111;
+    color:#fff;
+}
+
+/* Videos */
+
+#videoContainer{
+    max-width:1000px;
+    margin:auto;
+}
+
+/* Concerts */
+
+#concertContainer{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.concert-card{
+    border:1px solid #ddd;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+/* Social */
+
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.social-icons a{
+    padding:14px 22px;
+    border:1px solid #111;
+    transition:.3s;
+}
+
+.social-icons a:hover{
+    background:#111;
+    color:#fff;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #eee;
+}
+
+/* Back To Top */
+
+#backToTop{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    width:52px;
+    height:52px;
+    border:none;
+    border-radius:50%;
+    background:#111;
+    color:#fff;
+    cursor:pointer;
+    opacity:0;
+    pointer-events:none;
+    transition:.35s;
+}
+
+/* About Page */
+
+.small-hero{
+    height:50vh;
+}
+
+.about-page{
+    padding:120px 8%;
+}
+
+.about-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.about-container p{
+    margin-bottom:25px;
+}
+
+/* Contact Page */
+
+.contact-page{
+    background:#f8f8f8;
+    padding:120px 8%;
+}
+
+.contact-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.contact-card{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:30px;
+    margin-bottom:25px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:18px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+h1{
+    font-size:2.4rem;
+    letter-spacing:3px;
+}
+
+h2{
+    font-size:1.6rem;
+}
+
+section{
+    padding:90px 6%;
+}
+
+.button{
+    width:100%;
+    max-width:260px;
+}
+
+.streaming-grid{
+    grid-template-columns:1fr;
+}
+
+}
