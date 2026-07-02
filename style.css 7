@@ -1,0 +1,233 @@
+/* ==========================================
+   PART 16 - FINAL PREMIUM POLISH
+========================================== */
+
+/* Smooth page loading */
+body{
+    animation:pageLoad .8s ease;
+}
+
+@keyframes pageLoad{
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Premium glass navigation */
+
+header{
+
+backdrop-filter:blur(18px);
+
+-webkit-backdrop-filter:blur(18px);
+
+transition:.35s ease;
+
+}
+
+/* Better logo */
+
+.logo{
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.logo:hover{
+
+letter-spacing:6px;
+
+}
+
+/* Better images */
+
+img{
+
+transition:transform .5s ease,filter .5s ease;
+
+}
+
+img:hover{
+
+transform:scale(1.02);
+
+filter:brightness(1.04);
+
+}
+
+/* Premium cards */
+
+.release-card,
+.contact-card,
+.ticket-card,
+.product-card{
+
+border-radius:16px;
+
+overflow:hidden;
+
+box-shadow:0 15px 45px rgba(0,0,0,.08);
+
+transition:.35s ease;
+
+}
+
+.release-card:hover,
+.contact-card:hover,
+.ticket-card:hover,
+.product-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* Better buttons */
+
+.button{
+
+border-radius:60px;
+
+font-weight:600;
+
+padding:18px 48px;
+
+}
+
+.button:hover{
+
+transform:translateY(-4px);
+
+}
+
+/* Better section spacing */
+
+section{
+
+padding-top:120px;
+
+padding-bottom:120px;
+
+}
+
+/* Footer */
+
+footer{
+
+padding:60px 8%;
+
+}
+
+footer p{
+
+opacity:.8;
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero{
+
+padding-top:100px;
+
+}
+
+.button{
+
+width:100%;
+
+max-width:280px;
+
+}
+
+.logo{
+
+font-size:.95rem;
+
+}
+
+}
+
+// ==========================================
+// PART 16 - FINAL WEBSITE FUNCTIONS
+// ==========================================
+
+// Current Year
+
+const footerText=document.querySelector("footer p");
+
+if(footerText){
+
+footerText.innerHTML=`© ${new Date().getFullYear()} Trey Mavrik. All Rights Reserved.`;
+
+}
+
+// External Links
+
+document.querySelectorAll("a").forEach(link=>{
+
+const href=link.getAttribute("href");
+
+if(href && href.startsWith("http")){
+
+link.target="_blank";
+
+link.rel="noopener noreferrer";
+
+}
+
+});
+
+// Image Fade
+
+document.querySelectorAll("img").forEach(img=>{
+
+img.style.opacity="0";
+
+img.onload=()=>{
+
+img.style.transition="opacity .8s ease";
+
+img.style.opacity="1";
+
+};
+
+});
+
+// Hero Animation
+
+window.addEventListener("load",()=>{
+
+const hero=document.querySelector(".hero-content");
+
+if(hero){
+
+hero.style.opacity="0";
+
+hero.style.transform="translateY(25px)";
+
+setTimeout(()=>{
+
+hero.style.transition="all .9s ease";
+
+hero.style.opacity="1";
+
+hero.style.transform="translateY(0)";
+
+},200);
+
+}
+
+});
+
+// Console Message
+
+console.log("TREY MAVRIK Official Website Version 3.0 Loaded Successfully");
