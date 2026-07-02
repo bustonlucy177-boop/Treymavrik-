@@ -1,0 +1,163 @@
+/* ======================================
+   TREY MAVRIK OFFICIAL WEBSITE
+   File: css/style.css
+   Part 6
+   Premium Layout & UI Improvements
+====================================== */
+
+/* ----------------------------
+   General Images
+----------------------------- */
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+    user-select:none;
+    -webkit-user-drag:none;
+}
+
+/* ----------------------------
+   Embedded Videos
+----------------------------- */
+
+iframe{
+    display:block;
+    width:100%;
+    max-width:100%;
+    border:none;
+}
+
+/* ----------------------------
+   Better Scrolling
+----------------------------- */
+
+html{
+    scroll-padding-top:90px;
+}
+
+/* ----------------------------
+   Better Text Rendering
+----------------------------- */
+
+body{
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* ----------------------------
+   Keyboard Accessibility
+----------------------------- */
+
+a:focus,
+button:focus{
+
+    outline:2px solid #ffffff;
+    outline-offset:4px;
+
+}
+
+/* ----------------------------
+   Text Selection
+----------------------------- */
+
+::selection{
+
+    background:#111111;
+    color:#ffffff;
+
+}
+
+/* ----------------------------
+   Featured Release Image
+----------------------------- */
+
+.release-card img{
+
+    transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+
+}
+
+.release-card img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+
+}
+
+/* ----------------------------
+   Content Width
+----------------------------- */
+
+.release-card,
+.about-container,
+.contact-container,
+#videoContainer,
+#concertContainer{
+
+    max-width:1100px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+/* ----------------------------
+   Hero Section
+----------------------------- */
+
+.hero{
+
+    min-height:100vh;
+
+}
+
+/* ----------------------------
+   Page Fade
+----------------------------- */
+
+body{
+
+    animation:pageFade .8s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ----------------------------
+   Section Reveal Animation
+----------------------------- */
+
+section{
+
+    opacity:0;
+    transform:translateY(40px);
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+
+}
+
+section.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
