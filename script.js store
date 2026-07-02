@@ -1,0 +1,123 @@
+// ======================================
+// PART 14A
+// Store Buttons
+// ======================================
+
+document.querySelectorAll(".buy-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const item = this.closest(".store-item");
+
+        const product = item.querySelector("h3").textContent;
+
+        alert(product + " will be available soon.");
+
+    });
+
+});
+
+// ======================================
+// PART 14B
+// Newsletter
+// ======================================
+
+const newsletterForm = document.querySelector(".newsletter-form");
+
+if (newsletterForm) {
+
+    newsletterForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = this.querySelector("input").value.trim();
+
+        if (email === "") {
+
+            alert("Please enter your email address.");
+
+            return;
+
+        }
+
+        alert("Thanks for joining the Trey Mavrik community!");
+
+        this.reset();
+
+    });
+
+}
+// ======================================
+// PART 14C
+// Tickets
+// ======================================
+
+document.querySelectorAll(".ticket-btn").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        alert("Ticket sales will open soon.");
+
+    });
+
+});
+// ======================================
+// PART 14D
+// Card Animation
+// ======================================
+
+document.querySelectorAll(".store-item, .ticket-card").forEach(card => {
+
+    card.addEventListener("mouseenter", () => {
+
+        card.style.transform = "translateY(-8px)";
+
+    });
+
+    card.addEventListener("mouseleave", () => {
+
+        card.style.transform = "translateY(0px)";
+
+    });
+
+  // ======================================
+// PART 14E
+// Fade Animation
+// ======================================
+
+const cards = document.querySelectorAll(".store-item, .ticket-card");
+
+const cardObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.2
+
+});
+
+cards.forEach(card => {
+
+    card.style.opacity = "0";
+
+    card.style.transform = "translateY(30px)";
+
+    card.style.transition = "all .7s ease";
+
+    cardObserver.observe(card);
+
+});
+
+  
+
+});
