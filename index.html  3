@@ -1,0 +1,26 @@
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="hero-subtitle">
+            New Music • Pop • Trap • Alternative
+        </p>
+
+        <h1 class="hero-title">
+            TREY<br>MAVRIK
+        </h1>
+
+        <p class="hero-description">
+            Featuring tracks, visuals and exclusive releases from Trey Mavrik.
+            Discover the newest music and experience the official artist website.
+        </p>
+
+        <a href="#featured" class="listen-button">
+            LISTEN NOW
+        </a>
+
+    </div>
+
+</section>
