@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Downloads | Trey Mavrik</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">TREY MAVRIK</div>
+
+</header>
+
+<section class="hero small-hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>DIGITAL DOWNLOADS</h1>
+
+</div>
+
+</section>
+
+<section class="downloads-page">
+
+<h2>Music Downloads</h2>
+
+<div class="download-grid">
+
+<div class="download-card">
+
+<img src="images/album.jpg" alt="Latest Release">
+
+<h3>Latest Single</h3>
+
+<p>MP3 • WAV</p>
+
+<a href="#" class="button">DOWNLOAD</a>
+
+</div>
+
+<div class="download-card">
+
+<img src="images/ep.jpg" alt="EP">
+
+<h3>Latest EP</h3>
+
+<p>High Quality Audio</p>
+
+<a href="#" class="button">DOWNLOAD</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Trey Mavrik. All Rights Reserved.</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
