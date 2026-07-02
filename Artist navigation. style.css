@@ -1,0 +1,239 @@
+/* ======================================
+   TREY MAVRIK OFFICIAL WEBSITE
+   File: css/style.css
+   Part 7
+   Navigation • Hero • Buttons • Footer
+====================================== */
+
+/* ----------------------------
+   Header
+----------------------------- */
+
+header{
+
+    transition:
+        background .35s ease,
+        padding .35s ease,
+        box-shadow .35s ease;
+
+}
+
+header.scrolled{
+
+    background:rgba(0,0,0,.92);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+}
+
+/* ----------------------------
+   Logo
+----------------------------- */
+
+.logo{
+
+    transition:.3s ease;
+
+}
+
+.logo:hover{
+
+    opacity:.8;
+
+}
+
+/* ----------------------------
+   Navigation Links
+----------------------------- */
+
+nav ul{
+
+    align-items:center;
+
+}
+
+nav ul li a{
+
+    position:relative;
+
+    transition:color .3s ease;
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#ffffff;
+
+    transition:width .35s ease;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+nav a.active{
+
+    font-weight:600;
+
+}
+
+nav a.active::after{
+
+    width:100%;
+
+}
+
+/* ----------------------------
+   Hero
+----------------------------- */
+
+.hero{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:0 20px;
+
+    animation:heroFade 1.2s ease;
+
+}
+
+.hero h1{
+
+    line-height:1.05;
+
+    margin-bottom:35px;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ----------------------------
+   Buttons
+----------------------------- */
+
+.button{
+
+    min-width:200px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.18);
+
+}
+
+/* ----------------------------
+   Featured Release Card
+----------------------------- */
+
+.release-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.release-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.release-card h3{
+
+    font-size:1.6rem;
+
+    margin:25px 0 15px;
+
+}
+
+.release-card p{
+
+    max-width:600px;
+
+    margin:0 auto 35px;
+
+}
+
+/* ----------------------------
+   Footer
+----------------------------- */
+
+footer{
+
+    border-top:1px solid #e5e5e5;
+
+}
+
+footer p{
+
+    font-size:.9rem;
+
+    color:#666;
+
+    letter-spacing:.5px;
+
+}
