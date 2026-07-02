@@ -1,0 +1,57 @@
+// ==========================================
+// PART 17 - FINAL WEBSITE OPTIMIZATION
+// ==========================================
+
+// Loading Screen
+
+window.addEventListener("load",()=>{
+
+const loader=document.getElementById("loader");
+
+if(loader){
+
+setTimeout(()=>{
+
+loader.style.opacity="0";
+
+setTimeout(()=>{
+
+loader.style.display="none";
+
+},700);
+
+},600);
+
+}
+
+});
+
+// Smooth Fade Between Pages
+
+document.querySelectorAll("a").forEach(link=>{
+
+const href=link.getAttribute("href");
+
+if(
+
+href &&
+
+!href.startsWith("#") &&
+
+!href.startsWith("http")
+
+){
+
+link.addEventListener("click",function(){
+
+document.body.style.opacity=".97";
+
+});
+
+}
+
+});
+
+// Welcome Message
+
+console.log("TREY MAVRIK Official Website — Production Version Loaded");
